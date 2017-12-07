@@ -5,3 +5,17 @@ const products = [
   { name: 'Oreos', price: 6.49, discount: .8 },
   { name: 'Jasmine-scented bath pearls', price: 13.99, discount: .7 }
 ];
+
+function getTotalAmountForProducts(products) {
+  let totalPrice = 0;
+ 
+  products.forEach(product => {
+    if (product.discount >= .5) {
+      totalPrice += product.price;
+    }
+  });
+ 
+  return totalPrice;
+}
+ 
+console.log(getTotalAmountForProducts(products));
